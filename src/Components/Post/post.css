@@ -1,7 +1,27 @@
 .post {
-  height: 20vh;
+  max-width: 500px;
+  background: #ffffff;
+  border: 1px solid lightgrey;
+  margin-bottom: 45px;
 }
 .post-image {
   width: 100%;
   object-fit: contain;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+
+.post-caption {
+  font-weight: normal;
+  padding: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.post-avatar {
+  margin-right: 10px;
 }
