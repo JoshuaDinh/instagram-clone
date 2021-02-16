@@ -2,7 +2,38 @@
   background: #ffffff;
   -webkit-box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.45);
   box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.45);
-  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-auth-button {
+  margin-right: 15px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  cursor: pointer;
+}
+.header-auth-button:hover {
+  border-top: 1px solid #5851db;
+  border-left: 1px solid #833ab4;
+  border-right: 1px solid #c13584;
+  border-bottom: 1px solid#e1306c;
+}
+
+.header-auth-container {
+  display: flex;
+}
+
+.header-sign-in {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+  color: grey;
+}
+.header-sign-in:hover {
+  font-size: 1.1rem;
+  color: #833ab4;
 }
 
 .header-section {

@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.css";
 import logo from "../../Images/logo.png";
+import { auth } from "../../firebase";
 
 export const HeaderLogo = () => {
   return (
@@ -11,10 +12,28 @@ export const HeaderLogo = () => {
   );
 };
 
-export const Header = () => {
+export const Header = ({ setSignUpModal, user }) => {
   return (
     <div className="header">
       <HeaderLogo />
+      {user ? (
+        <div
+          className="header-log-out header-auth-button"
+          onClick={auth.signOut()}
+        >
+          Log out
+        </div>
+      ) : (
+        <div className="header-auth-container">
+          <div
+            className="header-sign-up header-auth-button"
+            onClick={() => setSignUpModal(true)}
+          >
+            Sign Up
+          </div>
+          <div className="header-sign-in ">Sign In</div>
+        </div>
+      )}
     </div>
   );
 };
