@@ -1,0 +1,6 @@
+.image-upload-button {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  width: 5%;
+}

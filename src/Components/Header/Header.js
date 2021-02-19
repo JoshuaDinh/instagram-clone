@@ -12,28 +12,37 @@ export const HeaderLogo = () => {
   );
 };
 
-export const Header = ({ setSignUpModal, user }) => {
+export const Header = ({ setSignUpModal, setSignInModal, user }) => {
   return (
     <div className="header">
       <HeaderLogo />
-      {user ? (
-        <div
-          className="header-log-out header-auth-button"
-          onClick={auth.signOut()}
-        >
-          Log out
-        </div>
-      ) : (
-        <div className="header-auth-container">
-          <div
-            className="header-sign-up header-auth-button"
-            onClick={() => setSignUpModal(true)}
-          >
-            Sign Up
+      <div className="header-auth-container">
+        {user ? (
+          <div className="header-log-out" onClick={() => auth.signOut()}>
+            Log out
           </div>
-          <div className="header-sign-in ">Sign In</div>
-        </div>
-      )}
+        ) : (
+          <div className="header-auth-container">
+            <div
+              className="header-sign-up header-auth-button"
+              onClick={() => setSignUpModal(true)}
+            >
+              <span>S</span>
+              <span>i</span>
+              <span>g</span>
+              <span>n</span>
+              <span> U</span>
+              <span>p</span>
+            </div>
+            <div
+              className="header-sign-in  header-auth-button"
+              onClick={() => setSignInModal(true)}
+            >
+              Sign In
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

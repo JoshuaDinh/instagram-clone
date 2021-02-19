@@ -1,27 +1,36 @@
 .header {
   background: #ffffff;
-  -webkit-box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.45);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 4px 14px 1px rgba(0, 0, 0, 0.45);
 }
 
 .header-auth-button {
   margin-right: 15px;
   border: 1px solid lightgrey;
-  padding: 10px;
+  padding: 8px;
   cursor: pointer;
 }
 .header-auth-button:hover {
   border-top: 1px solid #5851db;
   border-left: 1px solid #833ab4;
   border-right: 1px solid #c13584;
-  border-bottom: 1px solid#e1306c;
+  border-bottom: 1px solid#fd1d1d;
+  color: #e1306c;
 }
 
 .header-auth-container {
   display: flex;
+}
+
+.header-log-out {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.header-log-out:hover {
+  color: #e1306c;
 }
 
 .header-sign-in {
@@ -29,11 +38,15 @@
   align-items: center;
   margin-right: 15px;
   cursor: pointer;
-  color: grey;
+  color: rgb(88, 88, 88);
+  padding: 8px;
 }
 .header-sign-in:hover {
-  font-size: 1.1rem;
   color: #833ab4;
+  border-top: 1px solid #5851db;
+  border-left: 1px solid #833ab4;
+  border-right: 1px solid #c13584;
+  border-bottom: 1px solid#fd1d1d;
 }
 
 .header-section {
@@ -60,4 +73,90 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.header-sign-up > span:nth-child(1) {
+  animation: firstLetter 1s infinite;
+}
+.header-sign-up > span:nth-child(2) {
+  animation: secondLetter 1s infinite;
+}
+.header-sign-up > span:nth-child(3) {
+  animation: thirdLetter 1s infinite;
+}
+.header-sign-up > span:nth-child(4) {
+  animation: fourthLetter 1s infinite;
+}
+.header-sign-up > span:nth-child(5) {
+  animation: fifthLetter 1s infinite;
+}
+.header-sign-up > span:nth-child(6) {
+  animation: sixthLetter 1s infinite;
+}
+
+@keyframes firstLetter {
+  0% {
+    color: rgb(88, 88, 88);
+  }
+  5% {
+    color: #405de6;
+  }
+  100% {
+    color: rgb(88, 88, 88);
+  }
+}
+@keyframes secondLetter {
+  0% {
+    color: rgb(88, 88, 88);
+  }
+  10% {
+    color: #5851db;
+  }
+  100% {
+    color: rgb(88, 88, 88);
+  }
+}
+@keyframes thirdLetter {
+  0% {
+    color: rgb(88, 88, 88);
+  }
+  15% {
+    color: #833ab4;
+  }
+  100% {
+    color: rgb(88, 88, 88);
+  }
+}
+@keyframes fourthLetter {
+  0% {
+    color: rgb(88, 88, 88);
+  }
+  20% {
+    color: #c13584;
+  }
+  100% {
+    color: rgb(88, 88, 88);
+  }
+}
+@keyframes fifthLetter {
+  0% {
+    color: rgb(88, 88, 88);
+  }
+  25% {
+    color: #e1306c;
+  }
+  100% {
+    color: rgb(88, 88, 88);
+  }
+}
+@keyframes sixthLetter {
+  0% {
+    color: rgb(88, 88, 88);
+  }
+  30% {
+    color: #fd1d1d;
+  }
+  100% {
+    color: rgb(88, 88, 88);
+  }
 }
