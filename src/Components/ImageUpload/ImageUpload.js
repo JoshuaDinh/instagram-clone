@@ -14,7 +14,7 @@ export const ImageUpload = ({ username }) => {
     }
   };
 
-  const handleUpload = (e) => {
+  const handleUpload = () => {
     // Uploads images to Firebase
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
 
@@ -63,9 +63,9 @@ export const ImageUpload = ({ username }) => {
         onChange={(e) => setCaption(e.target.value)}
       />
       <input type="file" onClick={handleChange} />
-      <div className="image-upload-button" onClick={handleUpload}>
+      <button className="image-upload-button" onClick={handleUpload}>
         Upload
-      </div>
+      </button>
     </div>
   );
 };
